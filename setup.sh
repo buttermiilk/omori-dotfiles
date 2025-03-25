@@ -18,8 +18,8 @@ WHITE='\033[0;37m'
 NC='\033[0m' # No Color
 
 # GitHub repository URL
-REPO_URL="https://github.com/omori-dotfiles/omori-dotfiles"
-ARCHIVE_URL="https://github.com/omori-dotfiles/omori-dotfiles/archive/refs/heads/main.zip"
+REPO_URL="https://github.com/buttermiilk/omori-dotfiles"
+ARCHIVE_URL="https://github.com/buttermiilk/omori-dotfiles/archive/refs/heads/main.zip"
 
 # Welcome message
 clear
@@ -275,7 +275,7 @@ if [[ $download_wallpaper =~ ^[Yy]$ ]]; then
     create_dir "$HOME/Pictures/Wallpapers"
     echo -e "${BLUE}Downloading default OMORI wallpaper...${NC}"
     # This URL should be updated with a permanent link to your wallpaper
-    WALLPAPER_URL="https://raw.githubusercontent.com/omori-dotfiles/omori-dotfiles/main/wallpapers/omori_wallpaper.png"
+    WALLPAPER_URL="https://raw.githubusercontent.com/buttermiilk/omori-dotfiles/main/wallpapers/omori_wallpaper.png"
     curl -L "$WALLPAPER_URL" -o "$HOME/Pictures/Wallpapers/omori_wallpaper.png"
     
     # Update hyprpaper.conf
