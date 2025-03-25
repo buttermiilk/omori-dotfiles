@@ -1,4 +1,4 @@
-> [!INFO]
+> [!NOTE]
 > This is **NOT** my dotfiles. I shamelessly copied things from [this](https://github.com/lezzthanthree/config-files) repository. Any contributions should go there instead, this is for myself only.
 
 <h1 align="center"><img src='https://ih1.redbubble.net/image.2196574956.9510/st,small,507x507-pad,600x600,f8f8f8.jpg' height='100'><br>OMORI dotfiles</br></h1>
