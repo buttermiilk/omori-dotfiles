@@ -1,0 +1,146 @@
+* {
+    white: #ffffff;
+    black: #000000;
+
+    spacing: 2;
+    background-color: #00000000;
+    border-color: #ffffffff;
+    anchor: north;
+    location: center;
+}
+window {
+    transparency: "real";
+    background-color: #00000000;
+    padding: 0% 0% 1em 0%;
+    x-offset: 0;
+    y-offset: -10%;
+}
+mainbox {
+    padding: 0px;
+    border: 0;
+    spacing: 1%;
+    children: [mode-switcher, inputbar, listview];
+}
+
+/* mode switcher */
+
+mode-switcher {
+    background-color: @black;
+    border: 3px;
+}
+button {
+    padding: 0.5em 1em;
+    background-color: @black;
+    text-color: #ffffffff;
+    text-transform: uppercase;
+}
+button selected {
+    background-image: url("./selected_mode_b&w.png");
+    /* text-color: #ff0000ff; */
+}
+
+/* input bar  */
+
+inputbar {
+    spacing: 0;
+    border: 3px;
+    padding: 0.5em 1em;
+    background-color: @black;
+    index: 0;
+    children: [ textbox-prompt-colon, entry, case-indicator];
+}
+
+prompt,
+textbox-prompt-colon,
+entry,
+case-indicator {
+    text-color: @white;
+}
+
+entry {
+    placeholder: "Waiting for something to happen?";
+    placeholder-color: #666666;
+}
+
+textbox-prompt-colon {
+    expand: false;
+    str: "mewo:";
+    margin: 0px 0.3em 0em 0em;
+}
+
+message {
+    border: 3px;
+    padding: 1em;
+    background-color: @black;
+    text-color: @white;
+}
+
+textbox normal {
+    text-color: #002b36ff;
+    padding: 0;
+    border: 0;
+}
+
+/* listview */
+
+listview {
+    fixed-height: 1;
+    border: 3px;
+    padding: 1em;
+    reverse: false;
+    columns: 2;
+    fixed-columns: 2;
+    background-color: @black;
+}
+element {
+    border: 0;
+    padding: 2px 35px;
+    highlight: bold;
+}
+element-text {
+    background-color: inherit;
+    text-color: inherit;
+}
+element normal {
+    text-color: #ffffffff;
+    background-color: #000000ff;
+}
+element selected {
+    text-color: #ffffffff;
+    background-image: url("./selected.png");
+    /* background-color: #555555ff; */
+}
+element alternate {
+    text-color: #ffffffff;
+    background-color: #000000ff;
+}
+scrollbar {
+    border: 0;
+    padding: 0;
+}
+
+selected-item {
+    children: [icon-current-entry, textbox-current-entry];
+}
+
+textbox-current-entry {
+    orientation: horizontal;
+    padding: 0.5em 1em;
+    border: 3px;
+    background-color: @black;
+    text-color: @white;
+    text-transform: uppercase;
+}
+
+icon-current-entry {
+    /* size: 100px; */
+    padding: 0;
+    margin: 0;
+}
+
+error-message {
+    border: 3px;
+    padding: 1em;
+    background-color: #ff8888;
+    text-color: @black;
+}
