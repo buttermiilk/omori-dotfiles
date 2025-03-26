@@ -25,8 +25,8 @@ ARCHIVE_URL="https://github.com/buttermiilk/omori-dotfiles/archive/refs/heads/ma
 clear
 echo -e "${WHITE}╔══════════════════════════════════════════════════════════╗${NC}"
 echo -e "${WHITE}║                                                          ║${NC}"
-echo -e "${WHITE}║        ${MAGENTA}WELCOME TO WHITE SPACE.${WHITE}                           ║${NC}"
-echo -e "${WHITE}║        ${CYAN}OMORI DOTFILES INSTALLER${WHITE}                           ║${NC}"
+echo -e "${WHITE}║        ${MAGENTA}WELCOME TO WHITE SPACE.${WHITE}         ║${NC}"
+echo -e "${WHITE}║        ${CYAN}OMORI DOTFILES INSTALLER${WHITE}           ║${NC}"
 echo -e "${WHITE}║                                                          ║${NC}"
 echo -e "${WHITE}╚══════════════════════════════════════════════════════════╝${NC}"
 echo ""
@@ -170,7 +170,7 @@ AUR_PACKAGES=(
     "spicetify-cli"    # Spotify customization
     "spotify"          # Spotify
     "spotify-player"   # Spotify TUI player
-    "wlogout"         # Logout screen
+    "wlogout"          # Logout screen
 )
 
 for pkg in "${AUR_PACKAGES[@]}"; do
@@ -330,7 +330,7 @@ echo -e "${GREEN}Cleanup completed.${NC}"
 echo ""
 echo -e "${GREEN}╔══════════════════════════════════════════════════════════╗${NC}"
 echo -e "${GREEN}║                                                          ║${NC}"
-echo -e "${GREEN}║           ${WHITE}OMORI DOTFILES SETUP COMPLETED${GREEN}               ║${NC}"
+echo -e "${GREEN}║       ${WHITE}OMORI DOTFILES SETUP COMPLETED${GREEN}     ║${NC}"
 echo -e "${GREEN}║                                                          ║${NC}"
 echo -e "${GREEN}╚══════════════════════════════════════════════════════════╝${NC}"
 echo ""
