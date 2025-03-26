@@ -146,7 +146,6 @@ PACKAGES=(
     "waybar"          # Status bar
     "starship"        # Shell prompt
     "lazygit"         # Git interface
-    "wlogout"         # Logout screen
     "hyprpaper"       # Wallpaper manager
     "firefox-developer-edition" # Browser
     "grim"            # Screenshot utility
@@ -171,6 +170,7 @@ AUR_PACKAGES=(
     "spicetify-cli"    # Spotify customization
     "spotify"          # Spotify
     "spotify-player"   # Spotify TUI player
+    "wlogout"         # Logout screen
 )
 
 for pkg in "${AUR_PACKAGES[@]}"; do
@@ -275,12 +275,12 @@ if [[ $download_wallpaper =~ ^[Yy]$ ]]; then
     create_dir "$HOME/Pictures/Wallpapers"
     echo -e "${BLUE}Downloading default OMORI wallpaper...${NC}"
     # This URL should be updated with a permanent link to your wallpaper
-    WALLPAPER_URL="https://raw.githubusercontent.com/buttermiilk/omori-dotfiles/main/wallpapers/omori_wallpaper.png"
-    curl -L "$WALLPAPER_URL" -o "$HOME/Pictures/Wallpapers/omori_wallpaper.png"
+    WALLPAPER_URL="https://i.imgur.com/83xkF1C.jpeg"
+    curl -L "$WALLPAPER_URL" -o "$HOME/Pictures/Wallpapers/omori_wallpaper.jpeg"
     
     # Update hyprpaper.conf
-    sed -i "s|preload = # set wallpaper path here|preload = $HOME/Pictures/Wallpapers/omori_wallpaper.png|g" "$HOME/.config/hypr/hyprpaper.conf"
-    sed -i "s|wallpaper = ,# set wallpaper path here|wallpaper = ,$HOME/Pictures/Wallpapers/omori_wallpaper.png|g" "$HOME/.config/hypr/hyprpaper.conf"
+    sed -i "s|preload = # set wallpaper path here|preload = $HOME/Pictures/Wallpapers/omori_wallpaper.jpeg|g" "$HOME/.config/hypr/hyprpaper.conf"
+    sed -i "s|wallpaper = ,# set wallpaper path here|wallpaper = ,$HOME/Pictures/Wallpapers/omori_wallpaper.jpeg|g" "$HOME/.config/hypr/hyprpaper.conf"
     
     echo -e "${GREEN}Wallpaper set successfully.${NC}"
 else
@@ -293,11 +293,11 @@ else
         create_dir "$HOME/Pictures/Wallpapers"
         
         # Copy wallpaper
-        cp "$wallpaper_path" "$HOME/Pictures/Wallpapers/omori_wallpaper.png"
+        cp "$wallpaper_path" "$HOME/Pictures/Wallpapers/omori_wallpaper.jpeg"
         
         # Update hyprpaper.conf
-        sed -i "s|preload = # set wallpaper path here|preload = $HOME/Pictures/Wallpapers/omori_wallpaper.png|g" "$HOME/.config/hypr/hyprpaper.conf"
-        sed -i "s|wallpaper = ,# set wallpaper path here|wallpaper = ,$HOME/Pictures/Wallpapers/omori_wallpaper.png|g" "$HOME/.config/hypr/hyprpaper.conf"
+        sed -i "s|preload = # set wallpaper path here|preload = $HOME/Pictures/Wallpapers/omori_wallpaper.jpeg|g" "$HOME/.config/hypr/hyprpaper.conf"
+        sed -i "s|wallpaper = ,# set wallpaper path here|wallpaper = ,$HOME/Pictures/Wallpapers/omori_wallpaper.jpeg|g" "$HOME/.config/hypr/hyprpaper.conf"
         
         echo -e "${GREEN}Wallpaper set successfully.${NC}"
     else
